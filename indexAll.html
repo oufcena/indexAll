@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<h1>String matches!</h1>
+
+<script>
+var txt = "The rain in Spain stays mainly in the plain";
+
+function indexAll(txt, what) {
+  var arr, patt;
+  arr = [];
+  patt = eval(`/${what}/ig`);
+  
+  txt.replace(patt, function(found, i) {
+    arr.push(i);
+  })
+
+/*
+  Legacy Code :D
+  while( patt.test(txt) ) {
+    arr.push(patt.lastIndex);
+  }
+*/  
+
+  return arr.length ? arr : null;
+} 
+
+document.body.innerHTML += `
+<h3>
+Value: ${txt.match(/ain/ig)} <br>
+Index: ${indexAll(txt, 'ain')} 
+</h3>
+`;
+</script>
+
+</body>
+</html>
