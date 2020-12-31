@@ -1,3 +1,3 @@
 # indexAll
 
-[Preview](https://oufcena.github.io/indexAll/)
+[Preview](https://oufcena.github.io/indexAll/indexAll.html)
